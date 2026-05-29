@@ -1,0 +1,388 @@
+<!--
+  模板说明：此文件为HTML报告模板，CSS样式和板块结构已固定。
+  使用时复制一份，修改标题日期、表格数据、链接即可。
+  状态标签：tag-hot(红色/紧急) tag-ongoing(绿色/进行中) tag-done(蓝色/已结束) tag-none(灰色/无)
+  高亮框：highlight-box(橙色/窗口机会) info-box(蓝色/信息提示)
+  金额：用 <span class="amount"> 包裹
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内蒙古地区招标选择商业银行项目信息报告</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "SimSun", sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: #fff;
+    padding: 30px 40px;
+    text-align: center;
+  }
+  .header h1 { font-size: 24px; margin-bottom: 8px; }
+  .header p { font-size: 14px; opacity: 0.85; }
+  .content { padding: 30px 40px; }
+  h2 {
+    font-size: 18px;
+    color: #1a237e;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 8px;
+    margin: 32px 0 16px;
+  }
+  h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #555;
+  }
+  tr:hover { background: #fafafa; }
+  a { color: #1565c0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .tag-hot { background: #fce4ec; color: #c62828; }
+  .tag-done { background: #e8eaf6; color: #283593; }
+  .tag-ongoing { background: #e8f5e9; color: #2e7d32; }
+  .tag-none { background: #fafafa; color: #9e9e9e; }
+  .highlight-box {
+    background: #fff3e0;
+    border-left: 4px solid #e65100;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+  }
+  .info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #1565c0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+  }
+  .rank-1 { color: #e65100; font-weight: bold; }
+  .rank-2 { color: #1565c0; font-weight: bold; }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .summary-card {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 18px;
+  }
+  .summary-card h4 { font-size: 15px; color: #1a237e; margin-bottom: 6px; }
+  .summary-card .amount { font-size: 22px; font-weight: bold; color: #c62828; }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 12px;
+    border-top: 1px solid #e8e8e8;
+  }
+  .city-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    font-size: 13px;
+  }
+  .city-item { padding: 6px 8px; border: 1px solid #e0e0e0; border-radius: 4px; text-align: center; }
+  .city-found { background: #e8f5e9; border-color: #a5d6a7; }
+  .city-notfound { background: #fafafa; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+  <h1>内蒙古地区招标选择商业银行项目信息报告</h1>
+  <p>检索日期：2026年5月29日 ｜ 检索范围：近一周 + 相关历史项目 ｜ 面向机构：区分行机构金融业务部</p>
+</div>
+
+<div class="content">
+
+<h2>一、近一周（5月22日–29日）招标机会</h2>
+
+<table>
+  <tr>
+    <th>序号</th>
+    <th>项目名称</th>
+    <th>发布单位</th>
+    <th>金额</th>
+    <th>状态</th>
+    <th>来源链接</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><strong>内蒙古自治区本级2026年度第6期国库现金管理</strong></td>
+    <td><a href="https://czt.nmg.gov.cn" target="_blank">自治区财政厅</a></td>
+    <td><span class="amount">240亿</span></td>
+    <td><span class="tag tag-done">5月27日已开标</span></td>
+    <td><a href="https://czt.nmg.gov.cn/zzb/zfxxcg/202605/t20260522_2906247.html" target="_blank">招标公告</a> | <a href="http://huhehaote.pbc.gov.cn" target="_blank">中标公示</a></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><strong>呼伦贝尔市2026年医疗保障基金竞争性定期存款</strong></td>
+    <td>呼伦贝尔市医疗保障局</td>
+    <td><span class="amount">8亿</span></td>
+    <td><span class="tag tag-hot">报名中，截止6月1日</span></td>
+    <td><a href="https://nmg.qianlima.com/zbcontent-599678958.html" target="_blank">招标公告</a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><strong>呼和浩特市投标保证金服务银行征集</strong></td>
+    <td>呼和浩特市公共资源交易监督管理局</td>
+    <td>—</td>
+    <td><span class="tag tag-ongoing">征集中，截止6月4日</span></td>
+    <td><a href="https://ggzyjy.nmg.gov.cn" target="_blank">公告</a></td>
+  </tr>
+</table>
+
+<div class="highlight-box">
+  <strong>窗口机会：</strong>目前仅呼伦贝尔市医保基金8亿项目仍在招标期（<strong>6月1日截止</strong>），如工行在呼伦贝尔市设有分支机构，建议立即跟进。
+</div>
+
+<h2>二、第6期国库现金管理中标详情（240亿/1个月）</h2>
+
+<table>
+  <tr><th>排名</th><th>中标银行</th><th>分配额度</th><th>得分</th><th>利率</th></tr>
+  <tr><td class="rank-1">1</td><td>中国建设银行内蒙古分行</td><td>16.24亿</td><td>84.90</td><td>0.80%</td></tr>
+  <tr><td class="rank-2">2</td><td><strong>中国工商银行内蒙古分行</strong></td><td><strong>15.85亿</strong></td><td><strong>82.87</strong></td><td>0.80%</td></tr>
+  <tr><td>3</td><td>中国银行内蒙古分行</td><td>15.10亿</td><td>79.04</td><td>0.80%</td></tr>
+  <tr><td>4</td><td>中国农业银行内蒙古分行</td><td>15.02亿</td><td>78.53</td><td>0.80%</td></tr>
+  <tr><td>5</td><td>内蒙古农村商业银行</td><td>14.52亿</td><td>75.86</td><td>1.10%</td></tr>
+</table>
+
+<div class="info-box">
+  共20家银行中标，另有邮储银行、蒙商银行、交通银行、招商银行、广发银行、浙商银行、平安银行等。<br>
+  公告来源：<a href="https://czt.nmg.gov.cn" target="_blank">内蒙古自治区财政厅 czt.nmg.gov.cn</a>
+</div>
+
+<h2>三、其他相关项目（非近一周，供参考）</h2>
+
+<table>
+  <tr><th>项目名称</th><th>发布单位</th><th>发布时间</th><th>来源</th></tr>
+  <tr>
+    <td>鄂尔多斯市2026年第一批次社会保险基金银行定期存款</td>
+    <td>鄂尔多斯市财政局</td>
+    <td>2026.3.31</td>
+    <td><a href="https://czj.ordos.gov.cn/zytz/202603/t20260331_3885552.html" target="_blank">czj.ordos.gov.cn</a></td>
+  </tr>
+  <tr>
+    <td>包头市2026年度资金存放银行项目</td>
+    <td>—（采招网）</td>
+    <td>2026.3.5</td>
+    <td><a href="https://www.bidcenter.com.cn/newscontent-392273285-1.html" target="_blank">bidcenter.com.cn</a></td>
+  </tr>
+  <tr>
+    <td>自治区划转国有资本充实社保基金现金收益运营2026年度合作银行招选</td>
+    <td>蒙汇社保基金运营管理分公司</td>
+    <td>2025.12.18</td>
+    <td><a href="https://www.ejy365.com/purchase/209493" target="_blank">nmgygcg.ejy365.com</a></td>
+  </tr>
+  <tr>
+    <td>呼和浩特市本级社会保险基金定期存款</td>
+    <td>呼和浩特市财政局</td>
+    <td>2025.10.12</td>
+    <td><a href="http://czj.huhhot.gov.cn/zwgk/ggtz/202510/t20251012_1940832.html" target="_blank">czj.huhhot.gov.cn</a></td>
+  </tr>
+</table>
+
+<h2>四、全区14个盟市/计划单列市搜索覆盖情况</h2>
+
+<div class="city-grid">
+  <div class="city-item city-found">✅ 呼和浩特市<br><small>社保基金存款</small></div>
+  <div class="city-item city-found">✅ 包头市<br><small>资金存放项目</small></div>
+  <div class="city-item city-found">✅ 呼伦贝尔市<br><small>医保基金招标中</small></div>
+  <div class="city-item city-notfound">❌ 兴安盟</div>
+  <div class="city-item city-notfound">❌ 通辽市</div>
+  <div class="city-item city-notfound">❌ 赤峰市</div>
+  <div class="city-item city-notfound">❌ 锡林郭勒盟</div>
+  <div class="city-item city-notfound">❌ 乌兰察布市</div>
+  <div class="city-item city-found">✅ 鄂尔多斯市<br><small>社保基金存款</small></div>
+  <div class="city-item city-notfound">❌ 巴彦淖尔市</div>
+  <div class="city-item city-notfound">❌ 乌海市</div>
+  <div class="city-item city-notfound">❌ 阿拉善盟</div>
+  <div class="city-item city-notfound">❌ 满洲里市</div>
+  <div class="city-item city-notfound">❌ 二连浩特市</div>
+</div>
+
+<h2>五、各渠道搜索结论</h2>
+
+<h3>有结果的渠道</h3>
+<table>
+  <tr><th>渠道</th><th>网址</th><th>说明</th></tr>
+  <tr>
+    <td>百度/必应搜索引擎</td>
+    <td>—</td>
+    <td><strong>最佳入口</strong>，搜索"内蒙古 资金存放 银行 招标"等关键词</td>
+  </tr>
+  <tr>
+    <td>自治区财政厅</td>
+    <td><a href="https://czt.nmg.gov.cn" target="_blank">czt.nmg.gov.cn</a></td>
+    <td>国库现金管理招标发布地</td>
+  </tr>
+  <tr>
+    <td>各盟市财政局</td>
+    <td>如 <a href="https://czj.ordos.gov.cn" target="_blank">czj.ordos.gov.cn</a></td>
+    <td>社保基金定期存款发布地</td>
+  </tr>
+  <tr>
+    <td>阳光采购服务平台</td>
+    <td><a href="https://nmgygcg.ejy365.com" target="_blank">nmgygcg.ejy365.com</a></td>
+    <td>国资委系统，搜索"合作银行"</td>
+  </tr>
+  <tr>
+    <td>中国政府采购网</td>
+    <td><a href="https://ccgp.gov.cn" target="_blank">ccgp.gov.cn</a></td>
+    <td>部分项目在此发布</td>
+  </tr>
+</table>
+
+<h3>已验证无结果的渠道</h3>
+<table>
+  <tr><th>渠道</th><th>网址</th><th>尝试关键词</th><th>结论</th></tr>
+  <tr>
+    <td>内蒙古公共资源交易中心</td>
+    <td><a href="https://ggzyjy.nmg.gov.cn" target="_blank">ggzyjy.nmg.gov.cn</a></td>
+    <td>银行、资金存放、代理银行、国库、金融服务</td>
+    <td>❌ 不收录银行选择类招标，仅收录工程/采购类</td>
+  </tr>
+  <tr>
+    <td>自治区住建厅</td>
+    <td><a href="https://zjt.nmg.gov.cn" target="_blank">zjt.nmg.gov.cn</a></td>
+    <td>site搜索 银行</td>
+    <td>❌ 仅工程类</td>
+  </tr>
+  <tr>
+    <td>自治区医保局</td>
+    <td><a href="https://ybj.nmg.gov.cn" target="_blank">ybj.nmg.gov.cn</a></td>
+    <td>site搜索 银行</td>
+    <td>❌ 自治区本级无，盟市级有</td>
+  </tr>
+  <tr>
+    <td>自治区人社厅</td>
+    <td><a href="https://rst.nmg.gov.cn" target="_blank">rst.nmg.gov.cn</a></td>
+    <td>site搜索 银行</td>
+    <td>❌ 社保基金招标在财政局</td>
+  </tr>
+  <tr>
+    <td>住房资金中心</td>
+    <td><a href="http://nmgzfgjj.com.cn" target="_blank">nmgzfgjj.com.cn</a></td>
+    <td>site搜索 银行</td>
+    <td>❌ 仅IT系统采购</td>
+  </tr>
+</table>
+
+<h2>六、不同招标类型的发布规律</h2>
+
+<table>
+  <tr><th>招标类型</th><th>典型金额</th><th>发布渠道</th><th>招标频率</th><th>中标银行数</th></tr>
+  <tr>
+    <td>国库现金管理</td>
+    <td>200亿+/期</td>
+    <td><a href="https://czt.nmg.gov.cn" target="_blank">财政厅官网</a></td>
+    <td>约每月1期</td>
+    <td>约20家</td>
+  </tr>
+  <tr>
+    <td>社保基金定期存款</td>
+    <td>数亿~数十亿</td>
+    <td><a href="https://czj.ordos.gov.cn" target="_blank">盟市财政局</a></td>
+    <td>每批次</td>
+    <td>多家</td>
+  </tr>
+  <tr>
+    <td>医保基金定期存款</td>
+    <td>数亿</td>
+    <td>盟市医保局</td>
+    <td>不定期</td>
+    <td>多家</td>
+  </tr>
+  <tr>
+    <td>国资合作银行招选</td>
+    <td>不定</td>
+    <td><a href="https://nmgygcg.ejy365.com" target="_blank">阳光采购平台</a></td>
+    <td>年度</td>
+    <td>多家</td>
+  </tr>
+  <tr>
+    <td>代理银行资格</td>
+    <td>—</td>
+    <td>财政部门</td>
+    <td>约每3年</td>
+    <td>多家</td>
+  </tr>
+</table>
+
+<h2>七、建议关注要点</h2>
+
+<div class="summary-grid">
+  <div class="summary-card">
+    <h4>国库现金管理第7期</h4>
+    <p>预计2026年6月发布，关注 <a href="https://czt.nmg.gov.cn" target="_blank">czt.nmg.gov.cn</a> "通知公告"栏目</p>
+  </div>
+  <div class="summary-card">
+    <h4>呼伦贝尔市医保基金</h4>
+    <p><span class="tag tag-hot">6月1日截止！</span> 需在呼伦贝尔市有分支机构方可投标</p>
+  </div>
+  <div class="summary-card">
+    <h4>呼和浩特市投标保证金银行</h4>
+    <p><span class="tag tag-ongoing">6月4日截止</span> 征集合作银行</p>
+  </div>
+  <div class="summary-card">
+    <h4>各盟市社保基金存款</h4>
+    <p>定期关注盟市财政局网站，下一批次招标可能随时发布</p>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  报告生成时间：2026年5月29日 ｜ 数据来源：财政厅/局官网、中国政府采购网、必应/百度搜索、内蒙古阳光采购服务平台、内蒙古公共资源交易中心<br>
+  本报告仅供内部业务参考，不构成投标决策建议
+</div>
+
+</div>
+
+</body>
+</html>
