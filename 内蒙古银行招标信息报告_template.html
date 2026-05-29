@@ -1,9 +1,13 @@
 <!--
-  模板说明：此文件为HTML报告模板，CSS样式和板块结构已固定。
+  模板说明：此文件为HTML报告模板，已适配手机版面（响应式）。
   使用时复制一份，修改标题日期、表格数据、链接即可。
   状态标签：tag-hot(红色/紧急) tag-ongoing(绿色/进行中) tag-done(蓝色/已结束) tag-none(灰色/无)
   高亮框：highlight-box(橙色/窗口机会) info-box(蓝色/信息提示)
   金额：用 <span class="amount"> 包裹
+  重要规则：
+    1. 每个招标/中标项目的标题必须用 <a href> 包裹，可直接点击跳转到来源页面
+    2. 每个 <table> 外层必须用 <div class="table-wrapper"> 包裹，以支持手机端横向滚动
+    3. 来源链接列如有多个链接，可保留；否则可将标题作为主链接，来源列写"—"
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -127,6 +131,48 @@
   .city-item { padding: 6px 8px; border: 1px solid #e0e0e0; border-radius: 4px; text-align: center; }
   .city-found { background: #e8f5e9; border-color: #a5d6a7; }
   .city-notfound { background: #fafafa; }
+
+  /* 表格在移动端横向滚动 */
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 12px 0 20px;
+  }
+  .table-wrapper table {
+    min-width: 600px;
+    margin: 0;
+  }
+
+  /* ============= 手机版面适配 ============= */
+  @media screen and (max-width: 768px) {
+    body { padding: 0; }
+    .container { border-radius: 0; }
+    .header { padding: 20px 16px; }
+    .header h1 { font-size: 18px; }
+    .header p { font-size: 12px; }
+    .content { padding: 16px 12px; }
+    h2 { font-size: 16px; margin: 24px 0 12px; }
+    h3 { font-size: 14px; }
+    table { font-size: 12px; }
+    th, td { padding: 6px 8px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    .highlight-box, .info-box { padding: 10px 12px; font-size: 12px; }
+    .summary-grid { grid-template-columns: 1fr; gap: 10px; }
+    .summary-card { padding: 14px; }
+    .summary-card h4 { font-size: 14px; }
+    .summary-card .amount { font-size: 18px; }
+    .city-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; font-size: 11px; }
+    .footer { padding: 12px; font-size: 11px; }
+    a { word-break: break-all; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .header h1 { font-size: 16px; }
+    .content { padding: 12px 8px; }
+    .city-grid { grid-template-columns: repeat(2, 1fr); }
+    th, td { padding: 5px 6px; }
+  }
 </style>
 </head>
 <body>
@@ -142,6 +188,7 @@
 
 <h2>一、近一周（5月22日–29日）招标机会</h2>
 
+<div class="table-wrapper">
 <table>
   <tr>
     <th>序号</th>
@@ -153,29 +200,30 @@
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>内蒙古自治区本级2026年度第6期国库现金管理</strong></td>
+    <td><a href="https://czt.nmg.gov.cn/zzb/zfxxcg/202605/t20260522_2906247.html" target="_blank"><strong>内蒙古自治区本级2026年度第6期国库现金管理</strong></a></td>
     <td><a href="https://czt.nmg.gov.cn" target="_blank">自治区财政厅</a></td>
     <td><span class="amount">240亿</span></td>
     <td><span class="tag tag-done">5月27日已开标</span></td>
-    <td><a href="https://czt.nmg.gov.cn/zzb/zfxxcg/202605/t20260522_2906247.html" target="_blank">招标公告</a> | <a href="http://huhehaote.pbc.gov.cn" target="_blank">中标公示</a></td>
+    <td><a href="http://huhehaote.pbc.gov.cn" target="_blank">中标公示</a></td>
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>呼伦贝尔市2026年医疗保障基金竞争性定期存款</strong></td>
+    <td><a href="https://nmg.qianlima.com/zbcontent-599678958.html" target="_blank"><strong>呼伦贝尔市2026年医疗保障基金竞争性定期存款</strong></a></td>
     <td>呼伦贝尔市医疗保障局</td>
     <td><span class="amount">8亿</span></td>
     <td><span class="tag tag-hot">报名中，截止6月1日</span></td>
-    <td><a href="https://nmg.qianlima.com/zbcontent-599678958.html" target="_blank">招标公告</a></td>
+    <td>—</td>
   </tr>
   <tr>
     <td>3</td>
-    <td><strong>呼和浩特市投标保证金服务银行征集</strong></td>
+    <td><a href="https://ggzyjy.nmg.gov.cn" target="_blank"><strong>呼和浩特市投标保证金服务银行征集</strong></a></td>
     <td>呼和浩特市公共资源交易监督管理局</td>
     <td>—</td>
     <td><span class="tag tag-ongoing">征集中，截止6月4日</span></td>
-    <td><a href="https://ggzyjy.nmg.gov.cn" target="_blank">公告</a></td>
+    <td>—</td>
   </tr>
 </table>
+</div>
 
 <div class="highlight-box">
   <strong>窗口机会：</strong>目前仅呼伦贝尔市医保基金8亿项目仍在招标期（<strong>6月1日截止</strong>），如工行在呼伦贝尔市设有分支机构，建议立即跟进。
@@ -183,6 +231,7 @@
 
 <h2>二、第6期国库现金管理中标详情（240亿/1个月）</h2>
 
+<div class="table-wrapper">
 <table>
   <tr><th>排名</th><th>中标银行</th><th>分配额度</th><th>得分</th><th>利率</th></tr>
   <tr><td class="rank-1">1</td><td>中国建设银行内蒙古分行</td><td>16.24亿</td><td>84.90</td><td>0.80%</td></tr>
@@ -191,6 +240,7 @@
   <tr><td>4</td><td>中国农业银行内蒙古分行</td><td>15.02亿</td><td>78.53</td><td>0.80%</td></tr>
   <tr><td>5</td><td>内蒙古农村商业银行</td><td>14.52亿</td><td>75.86</td><td>1.10%</td></tr>
 </table>
+</div>
 
 <div class="info-box">
   共20家银行中标，另有邮储银行、蒙商银行、交通银行、招商银行、广发银行、浙商银行、平安银行等。<br>
@@ -199,33 +249,35 @@
 
 <h2>三、其他相关项目（非近一周，供参考）</h2>
 
+<div class="table-wrapper">
 <table>
   <tr><th>项目名称</th><th>发布单位</th><th>发布时间</th><th>来源</th></tr>
   <tr>
-    <td>鄂尔多斯市2026年第一批次社会保险基金银行定期存款</td>
+    <td><a href="https://czj.ordos.gov.cn/zytz/202603/t20260331_3885552.html" target="_blank">鄂尔多斯市2026年第一批次社会保险基金银行定期存款</a></td>
     <td>鄂尔多斯市财政局</td>
     <td>2026.3.31</td>
     <td><a href="https://czj.ordos.gov.cn/zytz/202603/t20260331_3885552.html" target="_blank">czj.ordos.gov.cn</a></td>
   </tr>
   <tr>
-    <td>包头市2026年度资金存放银行项目</td>
+    <td><a href="https://www.bidcenter.com.cn/newscontent-392273285-1.html" target="_blank">包头市2026年度资金存放银行项目</a></td>
     <td>—（采招网）</td>
     <td>2026.3.5</td>
     <td><a href="https://www.bidcenter.com.cn/newscontent-392273285-1.html" target="_blank">bidcenter.com.cn</a></td>
   </tr>
   <tr>
-    <td>自治区划转国有资本充实社保基金现金收益运营2026年度合作银行招选</td>
+    <td><a href="https://www.ejy365.com/purchase/209493" target="_blank">自治区划转国有资本充实社保基金现金收益运营2026年度合作银行招选</a></td>
     <td>蒙汇社保基金运营管理分公司</td>
     <td>2025.12.18</td>
     <td><a href="https://www.ejy365.com/purchase/209493" target="_blank">nmgygcg.ejy365.com</a></td>
   </tr>
   <tr>
-    <td>呼和浩特市本级社会保险基金定期存款</td>
+    <td><a href="http://czj.huhhot.gov.cn/zwgk/ggtz/202510/t20251012_1940832.html" target="_blank">呼和浩特市本级社会保险基金定期存款</a></td>
     <td>呼和浩特市财政局</td>
     <td>2025.10.12</td>
     <td><a href="http://czj.huhhot.gov.cn/zwgk/ggtz/202510/t20251012_1940832.html" target="_blank">czj.huhhot.gov.cn</a></td>
   </tr>
 </table>
+</div>
 
 <h2>四、全区14个盟市/计划单列市搜索覆盖情况</h2>
 
@@ -249,6 +301,7 @@
 <h2>五、各渠道搜索结论</h2>
 
 <h3>有结果的渠道</h3>
+<div class="table-wrapper">
 <table>
   <tr><th>渠道</th><th>网址</th><th>说明</th></tr>
   <tr>
@@ -277,8 +330,10 @@
     <td>部分项目在此发布</td>
   </tr>
 </table>
+</div>
 
 <h3>已验证无结果的渠道</h3>
+<div class="table-wrapper">
 <table>
   <tr><th>渠道</th><th>网址</th><th>尝试关键词</th><th>结论</th></tr>
   <tr>
@@ -312,9 +367,10 @@
     <td>❌ 仅IT系统采购</td>
   </tr>
 </table>
+</div>
 
 <h2>六、不同招标类型的发布规律</h2>
-
+<div class="table-wrapper">
 <table>
   <tr><th>招标类型</th><th>典型金额</th><th>发布渠道</th><th>招标频率</th><th>中标银行数</th></tr>
   <tr>
@@ -353,6 +409,7 @@
     <td>多家</td>
   </tr>
 </table>
+</div>
 
 <h2>七、建议关注要点</h2>
 

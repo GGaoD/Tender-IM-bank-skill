@@ -80,7 +80,7 @@ description: Use when searching for government tenders in Inner Mongolia that in
 
 ### 模板文件
 
-`内蒙古银行招标信息报告_template.html` — 预置了完整的CSS样式和板块结构：
+`内蒙古银行招标信息报告_template.html` — 预置了完整的CSS样式（含手机响应式适配）和板块结构：
 
 - 一、近一周招标机会（表格，含链接、金额、状态标记）
 - 二、国库现金管理中标详情（排名表格，前5名）
@@ -92,11 +92,13 @@ description: Use when searching for government tenders in Inner Mongolia that in
 
 ### 生成方法
 
-1. 读取模板文件获取CSS样式和结构
+1. 读取模板文件获取CSS样式和结构（模板已内置手机端 @media 响应式适配）
 2. 将搜索到的项目数据填入对应表格
 3. 更新日期标题（文件名格式：`内蒙古银行招标信息报告_YYYYMMDD.html`）
-4. 所有来源URL加上 `<a href>` 可点击链接
-5. 状态使用 `.tag` 类标记：
+4. **每个招标/中标项目的标题必须用 `<a href="来源URL">` 包裹**，使其可直接点击跳转到来源页面
+5. **每个 `<table>` 外层必须用 `<div class="table-wrapper">` 包裹**，以支持手机端横向滚动查看表格
+6. 来源链接列：如标题已是可点击链接，来源列可写"—"或保留补充链接（如中标公示等）
+7. 状态使用 `.tag` 类标记：
    - `.tag-hot` — 红色，报名中/紧急
    - `.tag-ongoing` — 绿色，征集中
    - `.tag-done` — 蓝色，已结束
@@ -108,6 +110,8 @@ description: Use when searching for government tenders in Inner Mongolia that in
 - 工行中标数据用 `<strong>` 突出显示
 - 对于"窗口机会"项目，使用 `<div class="highlight-box">` 高亮提醒
 - 历史参考项目使用 `<div class="info-box">` 蓝色框
+- 模板已内置手机版面适配（768px/480px断点），无需额外处理
+- 表格在手机端自动横向滚动，城市网格自动收缩为3列/2列
 
 ## 注意事项
 
