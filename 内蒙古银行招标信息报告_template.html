@@ -5,17 +5,21 @@
   高亮框：highlight-box(橙色/窗口机会) info-box(蓝色/信息提示)
   金额：用 <span class="amount"> 包裹
   重要规则：
-    1. 每个招标/中标项目的标题必须用 <a href> 包裹，可直接点击跳转到来源页面
-    2. 每个 <table> 外层必须用 <div class="table-wrapper"> 包裹，以支持手机端横向滚动
-    3. 来源链接列如有多个链接，可保留；否则可将标题作为主链接，来源列写"—"
-    4. ⚠️ 四、盟市覆盖情况 — 必须列出全部14个盟市/计划单列市，逐项 ✅/❌，不可缺漏任何一个
+     1. 每个招标/中标项目的标题必须用 <a href> 包裹，可直接点击跳转到来源页面
+     2. 每个 <table> 外层必须用 <div class="table-wrapper"> 包裹，以支持手机端横向滚动
+     3. 来源链接列如有多个链接，可保留；否则可将标题作为主链接，来源列写"—"
+     4. ⚠️ 一、近两周招标机会 — 严格限定两周内，优先展示内蒙古，中央仅展示未开标或最近一期
+     5. ⚠️ 三、其他相关项目 — 仅展示6个月内（180天）的历史项目
+     6. ⚠️ 四、全国级渠道 — 中央最多展示近三期，社保基金理事会无银行招标则不展示
+     7. ⚠️ 五、盟市覆盖情况 — 必须列出全部14个盟市/计划单列市，每次必须实现全覆盖，逐项 ✅/❌
+     8. ⚠️ 阳光采购平台 — 每次必须用Chrome DevTools MCP扫描 nmgygcg.ejy365.com，搜索引擎无法抓取
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>内蒙古地区招标选择商业银行项目信息报告</title>
+<title>招标选择商业银行项目信息报告（内蒙古 + 全国级）</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -181,8 +185,8 @@
 <div class="container">
 
 <div class="header">
-  <h1>内蒙古地区招标选择商业银行项目信息报告</h1>
-  <p>检索日期：2026年5月29日 ｜ 检索范围：近一周 + 相关历史项目 ｜ 面向机构：区分行机构金融业务部</p>
+  <h1>招标选择商业银行项目信息报告（内蒙古 + 全国级）</h1>
+  <p>检索日期：2026年5月29日 ｜ 检索范围：内蒙古地区近一周+全国级渠道+相关历史项目 ｜ 面向机构：区分行机构金融业务部</p>
 </div>
 
 <div class="content">
@@ -280,7 +284,44 @@
 </table>
 </div>
 
-<h2>四、全区14个盟市/计划单列市搜索覆盖情况</h2>
+<h2>四、全国级渠道招标信息</h2>
+
+<div class="highlight-box">
+  <strong>重要提示：</strong>全国级招标金额量级远超省级，中央国库现金管理单期金额通常数百亿，全国社保基金理事会招标金额可达数百亿。建议重点关注。
+</div>
+
+<h3>4.1 中央国库现金管理招标</h3>
+
+<div class="table-wrapper">
+<table>
+  <tr><th>期次</th><th>公告标题</th><th>金额</th><th>发布时间</th><th>状态</th><th>来源</th></tr>
+  <tr>
+    <td>—</td>
+    <td><a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/index.html" target="_blank">（访问央行官网获取最新数据）</a></td>
+    <td>—</td>
+    <td>—</td>
+    <td><span class="tag tag-none">待检索</span></td>
+    <td><a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/index.html" target="_blank">pbc.gov.cn</a></td>
+  </tr>
+</table>
+</div>
+
+<h3>4.2 全国社保基金理事会招标</h3>
+
+<div class="table-wrapper">
+<table>
+  <tr><th>项目名称</th><th>金额</th><th>发布时间</th><th>状态</th><th>来源</th></tr>
+  <tr>
+    <td><a href="https://www.ssf.gov.cn" target="_blank">（访问社保基金理事会官网获取最新数据）</a></td>
+    <td>—</td>
+    <td>—</td>
+    <td><span class="tag tag-none">待检索</span></td>
+    <td><a href="https://www.ssf.gov.cn" target="_blank">ssf.gov.cn</a></td>
+  </tr>
+</table>
+</div>
+
+<h2>五、全区14个盟市/计划单列市搜索覆盖情况</h2>
 
 <div class="city-grid">
   <div class="city-item city-found">✅ 呼和浩特市<br><small>社保基金存款</small></div>
@@ -299,7 +340,7 @@
   <div class="city-item city-notfound">❌ 二连浩特市</div>
 </div>
 
-<h2>五、各渠道搜索结论</h2>
+<h2>六、各渠道搜索结论</h2>
 
 <h3>有结果的渠道</h3>
 <div class="table-wrapper">
@@ -329,6 +370,16 @@
     <td>中国政府采购网</td>
     <td><a href="https://ccgp.gov.cn" target="_blank">ccgp.gov.cn</a></td>
     <td>部分项目在此发布</td>
+  </tr>
+  <tr>
+    <td><strong>中国人民银行官网</strong></td>
+    <td><a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/index.html" target="_blank">pbc.gov.cn</a></td>
+    <td><strong>全国级</strong>，中央国库现金管理招标发布地</td>
+  </tr>
+  <tr>
+    <td><strong>全国社保基金理事会</strong></td>
+    <td><a href="https://www.ssf.gov.cn" target="_blank">ssf.gov.cn</a></td>
+    <td><strong>全国级</strong>，社保基金管理银行招标发布地</td>
   </tr>
 </table>
 </div>
@@ -370,7 +421,7 @@
 </table>
 </div>
 
-<h2>六、不同招标类型的发布规律</h2>
+<h2>七、不同招标类型的发布规律</h2>
 <div class="table-wrapper">
 <table>
   <tr><th>招标类型</th><th>典型金额</th><th>发布渠道</th><th>招标频率</th><th>中标银行数</th></tr>
@@ -409,10 +460,24 @@
     <td>约每3年</td>
     <td>多家</td>
   </tr>
+  <tr>
+    <td><strong>中央国库现金管理（全国级）</strong></td>
+    <td>数百亿~千亿/期</td>
+    <td><a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/index.html" target="_blank">人民银行官网</a></td>
+    <td>约每月1-2期</td>
+    <td>多家商业银行</td>
+  </tr>
+  <tr>
+    <td><strong>全国社保基金理事会招标（全国级）</strong></td>
+    <td>数十亿~数百亿</td>
+    <td><a href="https://www.ssf.gov.cn" target="_blank">社保基金理事会</a></td>
+    <td>不定期</td>
+    <td>多家商业银行</td>
+  </tr>
 </table>
 </div>
 
-<h2>七、建议关注要点</h2>
+<h2>八、建议关注要点</h2>
 
 <div class="summary-grid">
   <div class="summary-card">
@@ -431,12 +496,20 @@
     <h4>各盟市社保基金存款</h4>
     <p>定期关注盟市财政局网站，下一批次招标可能随时发布</p>
   </div>
+  <div class="summary-card">
+    <h4>中央国库现金管理</h4>
+    <p><strong>全国级顶级机会！</strong>关注 <a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/index.html" target="_blank">pbc.gov.cn</a>，约每月1-2期，金额数百亿</p>
+  </div>
+  <div class="summary-card">
+    <h4>全国社保基金理事会</h4>
+    <p><strong>全国级重点！</strong>关注 <a href="https://www.ssf.gov.cn" target="_blank">ssf.gov.cn</a> 通知公告，银行招标金额巨大</p>
+  </div>
 </div>
 
 </div>
 
 <div class="footer">
-  报告生成时间：2026年5月29日 ｜ 数据来源：财政厅/局官网、中国政府采购网、必应/百度搜索、内蒙古阳光采购服务平台、内蒙古公共资源交易中心<br>
+  报告生成时间：2026年5月29日 ｜ 数据来源：财政厅/局官网、中国政府采购网、必应/百度搜索、内蒙古阳光采购服务平台、中国人民银行官网（中央国库现金管理）、全国社保基金理事会官网<br>
   本报告仅供内部业务参考，不构成投标决策建议
 </div>
 
