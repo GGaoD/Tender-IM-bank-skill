@@ -1,6 +1,6 @@
 ---
 name: tender-bank-search
-description: Use when searching for government tenders that involve selecting commercial banks as partners, including Inner Mongolia regional (treasury cash management, social security fund deposits, medical insurance fund deposits, housing provident fund management, and agent bank services) and national-level (central treasury cash management from PBOC, National Social Security Fund Council bidding). Also use when tracking competitor bank bidding results.
+description: Use when searching for government tenders that involve selecting commercial banks as partners, including Inner Mongolia regional (treasury cash management, social security fund deposits, medical insurance fund deposits, housing provident fund management, and agent bank services) and national-level (central treasury cash management from PBOC, National Social Security Fund Council bidding). Also use when tracking competitor bank bidding results. MANDATORY: Every search must include Chrome DevTools MCP scan of nmgygcg.ejy365.com.
 ---
 
 # 招标选择商业银行项目搜索（内蒙古地区 + 全国级）
@@ -98,7 +98,7 @@ description: Use when searching for government tenders that involve selecting co
 - **阳光采购平台**搜索"合作银行"——国资委系统项目偶尔出现
 - **中国政府采购网** 搜索 `内蒙古 银行 定期存款`
 
-### ⚠️ 阳光采购平台MCP扫描（每次任务必须执行）
+## ⚠️ 阳光采购平台MCP扫描（每次任务必须执行，不可跳过）
 
 阳光采购平台（nmgygcg.ejy365.com）使用 JavaScript 动态渲染，搜索引擎无法抓取项目列表，**必须使用 Chrome DevTools MCP 工具进行扫描**。
 
@@ -157,6 +157,8 @@ description: Use when searching for government tenders that involve selecting co
 ## 生成HTML报告
 
 搜索完成后，使用项目中的模板文件生成带链接的HTML汇总报告。
+
+> ⚠️ **生成报告前必须完成**：百度综合搜索 → 14盟市逐一搜索 → 央行官网 → 社保基金理事会 → **Chrome DevTools MCP 扫描阳光采购平台**。五步缺一不可。
 
 ### 模板文件
 
